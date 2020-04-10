@@ -35,76 +35,110 @@
 
 // const checkHaiku = (str) => {
 
-let str = `It was a pretty sunny day
-he was very smart
-and his name was Joe.`
+// let str = `It was a pretty sunny day
+// he was very smart
+// and his name was Joe.`
 
-const lines = str.split('\n');
+// // const lines = str.split('\n');
 
-const firstLineArr = lines[0].split(" ");
-const secondLineArr = lines[1].split(" ");
-const thirdLineArr = lines[2].split(" ");
+// const firstLineArr = lines[0].split(" ");
+// const secondLineArr = lines[1].split(" ");
+// const thirdLineArr = lines[2].split(" ");
 
-async function apiCall(keyword, callbackFunction, lineArr) {
+async function getSyllableCount(keyword) {
 	try {
 		let response = await fetch(`https://dictionaryapi.com/api/v3/references/collegiate/json/${keyword}?key=ca1d155c-0904-45b3-ab4a-c3e87282f319`);
-		let parsedResponse;
 		if (response.ok && response.status === 200) {
-			parsedResponse = await response.json();
+			const parsedResponse = await response.json();
+			const theDataPointWeWant = parsedResponse[0]["hwi"]["hw"]
+			let asteriskMatches = theDataPointWeWant.match(/\*/gi);
+			let numberOfSyllables = asteriskMatches ? asteriskMatches.length + 1 : 1;
+			return numberOfSyllables;
 		} else {
-			parsedResponse = false;
+			// numberOfSyllables = NaN;
 		}
-		callbackFunction(parsedResponse, lineArr);
 	} catch (e) {
-		callbackFunction(false);
 		console.log(e.message);
 	}
 }
 
-function returnSyllables(data, lineArr) {
-	if (data && data[0]["hwi"]["hw"]) {
-		let theDataPointWeWant = data[0]["hwi"]["hw"];
-		console.log(theDataPointWeWant);
-		let asteriskMatches = theDataPointWeWant.match(/\*/gi);
-		let numberOfSyllables = asteriskMatches ? asteriskMatches.length + 1 : 1;
-		lineArr.push(numberOfSyllables);
-	} else {
-		console.log('error');
-		return (`There was an error`);
-	}
-}
+//sunn*y*side
 
-let line1Arr = [];
+// let asteriskMatches = theDataPointWeWant.match(/\*/gi);
+// let numberOfSyllables = asteriskMatches ? asteriskMatches.length + 1 : 1;
 
-let block = async () => {
-	await firstLineArr.forEach(async (word) => {
-		let syllables = await apiCall(word, returnSyllables, line1Arr);
-	});
-}
+// firstLineArr.forEach((word) => {
 
-block();
-let line1Syllables;
-Promise.all(new Array(block)).then((result) => {
-	console.log(result)
-	/* THIS PART ISN'T WORKING */
-	line1Syllables = line1Arr.reduce((a, b) => a + b);
-});
-console.log(line1Arr);
+// });
 
-const arrOfWords = ["A", "dog", "is", "beautiful"];
-let arrOfSyllables = [];
-arrOfWords.forEach((word) => {
-	/* Call the dictionary API to get the # of syllables in each word */
-	apiCall(word, returnSyllables, arrOfSyllables);
-});
+const haiku1 = `It was a pretty sunny day
+he was very smart
+and his name was Joe.`;
 
-setTimeout(() => {
-	let numSyllables = arrOfSyllables.reduce((a, b) => a + b);
-	console.log(`in set timeout: ${numSyllables}`);
-}, 5000);
+// (async () => {
+// 	const foo = await getSyllableCount('mouser');
+// 	console.log(foo);
+// })()
 
-// countSyllables(arr)
-// const totalSyllables = arrOfSyllables.reduce((a, b) => a + b);
+
+const totalSyllablesArray = Promise.all(haiku1.split(`\n`).map(async line => {
+	const lineSyllablesArray = line.split(` `).map(async word => await getSyllableCount(word));
+	return Promise.all(lineSyllablesArray);
+})).then(syllables => console.log(syllables.map(line => line.reduce((a, b) => a + b, 0))));
+// [[1, 1, 1, 2, 2, 1], [1, 1, 2, 1], [1, 1, 1, 1, 1]]
+
+
+// const arrOfWords = ["A", "dog", "is", "beautiful"];
+
+// let arrOfSyllables = [];
+// arrOfWords.forEach((word) => {
+// 	/* Call the dictionary API to get the # of syllables in each word */
+// 	apiCall(word);
+// });
+// console.log(arrOfSyllables) // [1,1,1,3];
+
+// /* THIS NEEDS TO WAIT */
+// let totalSyllables = arrOfSyllables.reduce((a, b) => a + b);
+// console.log(totalSyllables);
+
+// setInterval(function () {
+// 	console.log('here');
+// 	if (arrOfWords.length === arrOfSyllables.length) {
+// 		console.log(arrOfSyllables);
+// 		clearTimeout();
+// 	}
+// 	else {
+// 		console.log(`${arrOfWords.length} --- ${arrOfSyllables.length}`);
+// 	}
+// }, 100);
+
+// setTimeout(() => {
+// 	let numSyllables = arrOfSyllables.reduce((a, b) => a + b);
+// 	console.log(`in set timeout: ${numSyllables}`);
+// }, 5000);
+
+
+
+/* THIS WAS OUR TEACHER'S RESPONSE */
+/* WHEN IT DIDN'T WORK */
+/* HE SHRUGGED AND LEFT */
+// async function test() {
+// 	const arrOfWords = ["A", "dog", "is", "beautiful"];
+
+// 	let arrOfSyllables = [];
+// 	await arrOfWords.forEach((word) => {
+// 		/* Call the dictionary API to get the # of syllables in each word */
+// 		apiCall(word, returnSyllables, arrOfSyllables);
+// 	});
+
+// 	/* THIS NEEDS TO WAIT */
+// 	let totalSyllables = arrOfSyllables.reduce((a, b) => a + b);
+// 	console.log(totalSyllables);
+// }
+
+
+
+
 
 
 // const getSyllables = (word) => fetch(`https://dictionaryapi.com/api/v3/references/collegiate/json/${word}?key=ca1d155c-0904-45b3-ab4a-c3e87282f319`)

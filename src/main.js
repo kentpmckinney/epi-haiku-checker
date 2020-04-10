@@ -1,15 +1,15 @@
 /* eslint-disable no-console */
-import './styles.css';
-import $ from 'jquery';
-import './haiku';
+// import './styles.css';
+// import './haiku';
+// import $ from 'jquery';
 
-$(document).ready(function() {});
+// $(document).ready(function () { });
 
-let maybeHaiku = `mi gato es lindo
-y mi otro gato es guapo
-y mi pero es gordo.`;
+// let maybeHaiku = `mi gato es lindo
+// y mi otro gato es guapo
+// y mi pero es gordo.`;
 
-checkLines(maybeHaiku);
+// checkLines(maybeHaiku);
 
 // const changeState = (prop) => {
 // 	return (value) => {
