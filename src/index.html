@@ -1,21 +1,25 @@
+<!DOCTYPE html>
+<html>
 <head>
   <link href="https://fonts.googleapis.com/css?family=Jomolhari&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
   integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
+<body>
 <main>
 <div class="container">
   <h2>Haiku Checker</h2>
   <form id="haiku-form">
   <div class="form-group">
   <label for="string">Enter a three line poem to see if it's <a href="https://literarydevices.net/haiku/" target="_blank" id="definition-link">a haiku</a>!</label>
-  <input type="text" class="form-control" name="text" id="haiku-input" required><br>
+  <textarea type="text" class="form-control" name="text" id="haiku-input" rows=3 required></textarea><br>
   <button type="submit" class="btn btn-primary">Click to Submit</button>
   </form>
     <div class="hidden" id="result"></div>
 </div>
 </main>
-
+</body>
+</html>
 <!-- <html>
 
 <head>
