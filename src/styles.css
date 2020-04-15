@@ -1,1 +1,25 @@
+main {
+  font-family: 'Jomolhari', serif;
+}
 
+h1, h2, h3, h4, h5 {
+  text-align: center;
+  padding-top: 10%;
+}
+
+form {
+  text-align: center;
+  padding: 5%;
+}
+
+.form-control {
+  padding-top: 10px;
+}
+
+label {
+  font-size: 18px;
+}
+
+#input-haiku {
+  margin-top: 15px;
+}

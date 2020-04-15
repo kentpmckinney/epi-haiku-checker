@@ -18,7 +18,3 @@ Promise.all(arrayOfPromises)
 
 Promise.all([func1(), func2(), func3()])
   .then(([result1, result2, result3]) => { /* use result1, result2 and result3 */ });
-
-
-
-const countLineSyllables = (firstLineArr) 
