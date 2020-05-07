@@ -1,3 +1,5 @@
+<!-- Category: HTML/CSS/JS -->
+
 # Functional Programming Practice 
 
 #### Enter a keyword to see a beautiful image with metadata and links. Epicodus independent project, 3/24/2020
