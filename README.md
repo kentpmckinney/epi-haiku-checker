@@ -1,10 +1,10 @@
-<!-- Category: HTML/CSS/JS -->
+<!-- Category: Epicodus;HTML/CSS/JS -->
 
 # Functional Programming Practice 
 
 #### Enter a keyword to see a beautiful image with metadata and links. Epicodus independent project, 3/24/2020
 
-#### By **Kent P. McKinney, Jordan Safford, Winter A. Runion**
+#### By **Kent P. McKinney and Winter A. Runion**
 
 ### Description
 Just a repo to practice [Epicodus' lessons on functional programming](https://www.learnhowtoprogram.com/react-part-time-react-track/functional-programming-with-javascript-d29c6d11-ed51-4309-8e50-d55fa93281ec).
@@ -58,7 +58,4 @@ Just a repo to practice [Epicodus' lessons on functional programming](https://ww
 
 Contact me if you have questions or comments at winterrunion@gmail.com
 
-### License
-_This software is licensed under the MIT license._
-
-_Copyright (c) 2020 **Winter A. Runion**_
+_Copyright (c) 2020 **Kent McKinney and Winter A. Runion**_
