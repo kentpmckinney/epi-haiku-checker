@@ -1,47 +1,68 @@
-<!-- Category: Epicodus;HTML/CSS/JS -->
-
+<!-- Category: Epicodus;Bootstrap;HTML/CSS/JS -->
 # Haiku Checker
 
-#### By **Kent P. McKinney and Winter A. Runion**
+Validates whether the provided lines of text form a haiku
 
-### Description
+https://github.com/kentpmckinney/epi-haiku-checker
 
-``Validates whether given lines of text accurately represent a haiku``
+## Previewing this Project
 
-### Instructions for Mac
-##### To run this project locally, you need: NPM and Node.js
+This project is hosted at: https://kentpmckinney.github.io/epi-haiku-checker
 
-* To run this project, you need NPM and Node.js installed on your machine. 
-    1. Check is NPM is already installed: type `npm -v` in your CLI. If it returns a version number, you're good to go!
-    2. If you don't have NPM, download it [here](https://www.npmjs.com/get-npm)
-    3. You also need Node.js. Follow the instructions above to make sure you have it installed. If not, download it [here](https://www.npmjs.com/get-npm). (Note: this is the same link as above - NPM and Node.js usually come as a pair.)
-    
-* Installing the project: 
-    1. In a terminal (bash recommended) clone this repo: 
-`git clone https://github.com/wrunion/image-finder`
-    2. Navitage into the directory: `cd image-finder`
-  3. In a terminal (bash recommended) run `npm install`
-  
-* Time to build! Run these two commands, and then you'll be in business:
-      `npm run build`
-      `npm run start`
-      
-* Enjoy your new photo app! This code is licensed under the MIT license, so feel free to use as you see fit. See license specs for more details.
+## Working with the Source Code
 
-### Specs
+The following instructions explain how to set up a development environment for this project on MacOS. Steps will differ depending on the operating system.
+
+### Prerequisites
+
+The following software must be installed and properly configured on the target machine. 
+
+```
+An updated web browser (Internet Explorer is not compatible)
+```
+```
+Node.js
+```
+```
+Git (optional but recommended)
+```
+
+### Setting up a Development Environment
+
+1. Download a copy of the source code from: https://github.com/kentpmckinney/epi-haiku-checker
+   or clone using the repository link: https://github.com/kentpmckinney/epi-haiku-checker.git
+2. Navigate to the folder location of the source files in Finder or in the Terminal
+3. Run the command `npm install` to download a local cache of the npm packages used by this application
+4. Build the application with the command `npm run build`
+5. Start the application with the command `npm run start`
+
+## Running Automated Tests
+
+how to run the automated tests
+
+```
+example
+```
+
+## Deployment
 
 
-### Technologies Used
-* Node.js
+
+## Technologies Used
+
+* JavaScript
+* HTML
+* CSS
 * Webpack
 * Babel
 * Bootstrap
 
-### Known Bugs
-* None
+## Authors
 
-### Contact
+Kent McKinney - [GitHub](https://github.com/kentpmckinney) - [LinkedIn](https://www.linkedin.com/in/kentpmckinney/)
+Winter Runion
 
-Contact me if you have questions or comments at winterrunion@gmail.com
+### Copyright &copy; 2020 Kent P. McKinney
 
-_Copyright (c) 2020 **Kent McKinney and Winter A. Runion**_
+## Acknowledgments
+
