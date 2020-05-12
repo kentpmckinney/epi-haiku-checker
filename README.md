@@ -1,4 +1,4 @@
-<!-- Category: Epicodus;Bootstrap;HTML/CSS/JS -->
+<!-- Category: Epicodus;HTML/CSS/JS -->
 # Haiku Checker
 
 Validates whether the provided lines of text form a haiku
@@ -36,17 +36,9 @@ Git (optional but recommended)
 4. Build the application with the command `npm run build`
 5. Start the application with the command `npm run start`
 
-## Running Automated Tests
-
-how to run the automated tests
-
-```
-example
-```
-
 ## Deployment
 
-
+Run the command 'npm run build' to build a production version of the application 
 
 ## Technologies Used
 
@@ -62,7 +54,8 @@ example
 Kent McKinney - [GitHub](https://github.com/kentpmckinney) - [LinkedIn](https://www.linkedin.com/in/kentpmckinney/)
 Winter Runion
 
-### Copyright &copy; 2020 Kent P. McKinney
+### Copyright &copy; 2020 Kent P. McKinney and Winter Runion
 
 ## Acknowledgments
 
+https://www.learnhowtoprogram.com/react-part-time-react-track/functional-programming-with-javascript-continued/power-plant-build-your-own-rpg-haiku-checker-week-long-project-1444ce52-6321-424e-a7c7-cb95a9bb37f6

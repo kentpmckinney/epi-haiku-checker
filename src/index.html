@@ -1,50 +1,26 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <link href="https://fonts.googleapis.com/css?family=Jomolhari&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-  integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-</head>
-<body>
-<main>
-<div class="container">
-  <h2>Haiku Checker</h2>
-  <form id="haiku-form">
-  <div class="form-group">
-  <label for="string">Enter a three line poem to see if it's <a href="https://literarydevices.net/haiku/" target="_blank" id="definition-link">a haiku</a>!</label>
-  <textarea type="text" class="form-control" name="text" id="haiku-input" rows=3 required></textarea><br>
-  <button type="submit" class="btn btn-primary">Click to Submit</button>
-  </form>
-    <div class="hidden" id="result"></div>
-</div>
-</main>
-</body>
-</html>
-<!-- <html>
-
-<head>
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
-  <title>Grow Your Plant</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    crossorigin="anonymous">
 </head>
 
 <body>
-  <div class="container">
-    <h1>Grow Your Plant</h1>
-    <div class="grow-buttons">
-      <button class="btn-primary" id="feedBlue">Add blue soil</button>
-      <button class="btn-success" id="feedGreen">Add green soil</button>
-      <button class="btn-danger" id="feedYucky">Add yucky soil</button>
+  <main>
+    <div class="container">
+      <h2>Haiku Checker</h2>
+      <form id="haiku-form">
+        <div class="form-group">
+          <label for="string">Enter a three line poem to see if it's <a href="https://literarydevices.net/haiku/"
+              target="_blank" id="definition-link">a haiku</a>!</label>
+          <textarea type="text" class="form-control" name="text" id="haiku-input" rows=3 required></textarea><br>
+          <button type="submit" class="btn btn-primary">Click to Submit</button>
+      </form>
+      <div class="hidden" id="result"></div>
     </div>
-    <h3>Your Plant's Values</h3>
-    <h5>Soil:<div id="soil-value">0</div>
-    </h5>
-  </div>
+  </main>
 </body>
-<script type="text/javascript" src="haiku.js"></script>
-<script type="text/javascript" src="main.js"></script>
 
-</html> -->
+</html>
