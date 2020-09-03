@@ -5,14 +5,12 @@ export async function getSyllableCount(keyword) {
     if (response.ok && response.status === 200) {
       const parsedResponse = await response.json();
       const theDataPointWeWant = parsedResponse[0]["hwi"]["hw"];
-      let asteriskMatches = theDataPointWeWant.match(/\*/gi);
-      let numberOfSyllables = asteriskMatches ? asteriskMatches.length + 1 : 1;
-      return numberOfSyllables;
+      let syllables = theDataPointWeWant.split("*");
+      return syllables.length;
     } else {
-      return;
+      return 0;
     }
   } catch (e) {
-    console.log(e.message);
-    return(e.message);
+    return 0;
   }
 }

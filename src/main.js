@@ -21,7 +21,7 @@ $(document).ready(function () {
     } else if (isHaiku === false) {
       outputDiv.append(`Your poem is not a haiku`);
     } else {
-      outputDiv.append(`There was a technical error. Try again later.`);
+      //outputDiv.append(`There was a technical error. Try again later.`);
     }
 
   });
